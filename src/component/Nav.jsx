@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -35,6 +35,7 @@ const Navbar = () => {
                     </ul>
                </div>
           </nav>
+         
      );
 };
 
