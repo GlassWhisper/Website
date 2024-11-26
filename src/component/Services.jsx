@@ -1,42 +1,64 @@
 import React from "react";
+import img from "../assets/contoh.jpeg";
+import img2 from "../assets/contoh2.jpeg"
 
 const Services = () => {
-     return (
-          <section className="bg-[#f3d6c7] py-16 px-8">
-               <div className="container mx-auto text-center mb-8">
-                    <h2 className="text-3xl font-bold uppercase mb-6">Services</h2>
-               </div>
+  const services = [
+    {
+      image: img,
+      title: "TEAMS",
+      description:
+        "Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.",
+    },
+    {
+      image: img2,
+      title: "TEAMS",
+      description:
+        "Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.",
+    },
+    {
+      image: img,
+      title: "TEAMS",
+      description:
+        "Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.",
+    },
+  ];
 
-               <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {/* Card 1 */}
-                    <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                         <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
-                              <img src="https://via.placeholder.com/150" alt="Team 1" className="w-full h-full object-cover" />
-                         </div>
-                         <h3 className="text-xl font-bold uppercase mb-2">Teams</h3>
-                         <p className="text-gray-600">Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.</p>
-                    </div>
+  return (
+    <div className="bg-colorService">
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <h2 className="text-3xl font-semibold mb-16 tracking-widest">
+          S E R V I C E S
+        </h2>
 
-                    {/* Card 2 */}
-                    <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                         <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
-                              <img src="https://via.placeholder.com/150" alt="Team 2" className="w-full h-full object-cover" />
-                         </div>
-                         <h3 className="text-xl font-bold uppercase mb-2">Teams</h3>
-                         <p className="text-gray-600">Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.</p>
-                    </div>
-
-                    {/* Card 3 */}
-                    <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                         <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
-                              <img src="https://via.placeholder.com/150" alt="Team 3" className="w-full h-full object-cover" />
-                         </div>
-                         <h3 className="text-xl font-bold uppercase mb-2">Teams</h3>
-                         <p className="text-gray-600">Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.</p>
-                    </div>
-               </div>
-          </section>
-     );
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="group">
+              {/* Image Container with Arch Shape */}
+              <div className="relative mb-8 m-10">
+                <div className="aspect-square rounded-t-full bg-gray-100 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                {/* Content */}
+                <div className="text-center px-4 py-6 bg-colorAbout  shadow-md">
+                <h3 className="text-sm font-semibold mb-4 tracking-widest">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Services;
