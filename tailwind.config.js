@@ -13,7 +13,7 @@ export default {
                     navColor: "#967259",
                     colorAbout: "#EFE2D6",
                     colorService: "#EAD0B8",
-                    colorTeams :"background: #EFE2D6"
+                    colorTeams: "background: #EFE2D6",
                },
           },
      },
