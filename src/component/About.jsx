@@ -17,8 +17,8 @@ const Home = () => {
 
         {/* Image Section */}
         {/* <div className="lg:w-1/2 flex justify-center border-black border"> */}
-        <div className="md:w-1/2 mt-10 md:mt-0 px-10 flex">
-          <img src={img} alt="About" className="w-full top- h-full object-cover" />  
+        <div className="p">
+          <img src={img} alt="About" className="w-full top- h-full object-cover relative rig" />  
         </div>
         {/* </div> */}
       </div>

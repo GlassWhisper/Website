@@ -5,6 +5,7 @@ export default {
      theme: {
           backgroundImage: {
                "hero-pattern": "url('/src/assets/home.png')",
+               "image-about" : "url('/src/assets/about.png')"
           },
           extend: {
                colors: {

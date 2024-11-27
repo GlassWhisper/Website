@@ -5,7 +5,8 @@ const Navbar = () => {
      return (
           <nav className="bg-navColor shadow-2xl w-full z-50 fixed">
                <div className="absolute w-60 bg-navColor flex items-center justify-center">
-                    <img src={logo} alt="Logo" className="w-12" />
+                    <img src={logo} alt="Logo" className="w-12"/>
+                    
                </div>
                <div className="container py-2 mx-auto flex items-center justify-between relative">
                     <ul className="flex items-center mx-auto space-x-11 py-4 text-bg-register font-mono font-semibold tracking-wider">
