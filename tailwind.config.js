@@ -14,7 +14,9 @@ export default {
                     colorAbout: "#EFE2D6",
                     colorService: "#EAD0B8",
                     colorTeams: "background: #EFE2D6",
-                    font : "#542200"
+                    font : "#542200",
+                    footer: "#C9A48A"
+
                },
           },
      },

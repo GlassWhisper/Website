@@ -8,7 +8,7 @@ const Navbar = () => {
                     <img src={logo} alt="Logo" className="w-12" />
                </div>
                <div className="container py-2 mx-auto flex items-center justify-between relative">
-                    <ul className="flex items-center mx-auto space-x-11 py-4 text-bg-register font-mono font-semibold tracking-wider">
+                    <ul className="flex items-center mx-auto space-x-11 py-4 text-bg-register font-mono font-semibold tracking-wider ">
                          <li>
                               <a href="/" className="hover:text-[#c8ced3] duration-500">
                                    Home
