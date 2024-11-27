@@ -11,7 +11,7 @@ const Home = () => {
                     </h1>
                </div>
                <div className="text-center">
-                    <button className="font-mono border-y border-y-white hover:border-[#231003] py-2 px-10 mt-14 rounded-3xl bg-button text-black hover:text-white transition-colors duration-300">Get Started App...</button>
+                    <button className="font-mono hover:border-[#231003] py-2 px-10 mt-14 rounded-3xl bg-button text-black hover:text-white transition-colors duration-300">Get Started App...</button>
                </div>
           </div>
      );
