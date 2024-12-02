@@ -2,6 +2,10 @@ import React from "react";
 import img from "../assets/team1.png"
 import img2 from "../assets/team2.png"
 import img3 from "../assets/team3.png"
+import goat1 from "../assets/goat.jpeg"
+import goat2 from "../assets/goat2.jpeg"
+import goat3 from "../assets/goat3.jpeg"
+import goat4 from "../assets/goat4.jpeg"
 
 const Teams = () => {
      return (
@@ -15,7 +19,7 @@ const Teams = () => {
                 T E A M S
               </h2>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                Projects are handled by professional certified teams
+                LIONEL MESSI GOAT
               </h1>
               <p className="text-gray-600 mb-8 font-bold">
                 Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.
@@ -27,11 +31,11 @@ const Teams = () => {
           </div>
 
           {/* Right Content - Team Grid */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6 ">
             {/* Team Member 1 */}
             <div className="">
               <img 
-                src={img}
+                src={goat1}
                 alt="Team member"
                 className="w-full h-full object-cover"
               />
@@ -40,7 +44,7 @@ const Teams = () => {
             {/* Team Member 2 */}
             <div className="">
               <img 
-                src={img2}
+                src={goat2}
                 alt="Team member"
                 className="w-full h-full object-cover"
               />
@@ -49,7 +53,7 @@ const Teams = () => {
             {/* Team Member 3 */}
             <div className="">
               <img 
-                src={img2}
+                src={goat3}
                 alt="Team member"
                 className="w-full h-full object-cover"
               />
@@ -58,7 +62,7 @@ const Teams = () => {
             {/* Team Member 4 */}
             <div className="">
               <img 
-                src={img3}
+                src={goat4}
                 alt="Team member"
                 className="w-full h-full object-cover"
               />
