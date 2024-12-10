@@ -19,7 +19,7 @@ const Teams = () => {
                 T E A M S
               </h2>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                LIONEL MESSI GOAT
+              Projects are handled by professional certified teams
               </h1>
               <p className="text-gray-600 mb-8 font-bold">
                 Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.
@@ -35,7 +35,7 @@ const Teams = () => {
             {/* Team Member 1 */}
             <div className="">
               <img 
-                src={goat1}
+                src={img}
                 alt="Team member"
                 className="w-full h-full object-cover"
               />
@@ -44,7 +44,7 @@ const Teams = () => {
             {/* Team Member 2 */}
             <div className="">
               <img 
-                src={goat2}
+                src={img2}
                 alt="Team member"
                 className="w-full h-full object-cover"
               />
@@ -53,7 +53,7 @@ const Teams = () => {
             {/* Team Member 3 */}
             <div className="">
               <img 
-                src={goat3}
+                src={img2}
                 alt="Team member"
                 className="w-full h-full object-cover"
               />
@@ -62,7 +62,7 @@ const Teams = () => {
             {/* Team Member 4 */}
             <div className="">
               <img 
-                src={goat4}
+                src={img3}
                 alt="Team member"
                 className="w-full h-full object-cover"
               />
