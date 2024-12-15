@@ -3,18 +3,18 @@ import Home from "./component/Home";
 import About from "./component/About";
 import Services from "./component/Services";
 import Teams from "./component/teams";
-import Maintenance from "./pages/Maintenance";
 import Footer from "./component/Footer";
+import Maintenance from "./pages/Maintenance";
 function App() {
      return (
           <div>
-               <Navbar />
+               {/* <Navbar />
                <Home />
                <About />
                <Services />
-               <Teams/>
-               <Footer/>
-               {/* <Maintenance/> */}
+               <Teams />
+               <Footer /> */}
+               <Maintenance />
           </div>
      );
 }
