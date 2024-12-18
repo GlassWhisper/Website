@@ -2,32 +2,29 @@ import React from "react";
 import img from "../assets/team1.png"
 import img2 from "../assets/team2.png"
 import img3 from "../assets/team3.png"
-import goat1 from "../assets/goat.jpeg"
-import goat2 from "../assets/goat2.jpeg"
-import goat3 from "../assets/goat3.jpeg"
-import goat4 from "../assets/goat4.jpeg"
 
 const Teams = () => {
      return (
-          <section className="bg-colorAbout min-h-screen flex items-center justify-center p-8">
+         <section id="teams" className="bg-colorAbout min-h-screen flex items-center justify-center p-8">
       <div className="max-w-6xl w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-sm uppercase font-bold tracking-wider text-black mb-4">
+              <h2 className="text-2xl uppercase font-bold tracking-wider text-black mb-4">
                 T E A M S
               </h2>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Projects are handled by professional certified teams
+              <h1 className="pb-[200px] text-4xl md:text-5xl font-bold leading-tight mb-6">
+                Glasswhisper app engineer development team
               </h1>
-              <p className="text-gray-600 mb-8 font-bold">
-                Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.
+              <p className="text-gray-600 mt-[90px] font-mono">
+                yasir riski - muhammad zulfan sururi - muhammad hanif isnain - muhammad reikhan efendi
               </p>
             </div>
-            <button className="px-8 py-3 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-300">
-              LEARN TEAMS
-            </button>
+
+            {/*<button className="px-8 py-3 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-300">*/}
+            {/*  LEARN TEAMS*/}
+            {/*</button>*/}
           </div>
 
           {/* Right Content - Team Grid */}

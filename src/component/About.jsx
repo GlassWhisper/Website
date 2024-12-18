@@ -3,7 +3,7 @@ import img from "../assets/about.png";
 
 const Home = () => {
      return (
-          <div id="Services" className="bg-colorAbout px-8 py-12">
+          <div id="about" className="bg-colorAbout px-8 py-12">
                <div className="container mx-auto flex flex-col lg:flex-row items-center">
                     {/* Text Section */}
                     <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 px-10 py-10">

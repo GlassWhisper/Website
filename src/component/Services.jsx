@@ -1,31 +1,32 @@
 import React from "react";
-import img from "../assets/contoh.jpeg";
-import img2 from "../assets/contoh2.jpeg"
+import service1 from "../assets/service1.png";
+import service2 from "../assets/service2.png";
+import service3 from "../assets/service3.png";
 
-const Services = () => {
+const Services = () => {      
   const services = [
     {
-      image: img,
-      title: "TEAMS",
+      image: service1,
+      title: "Kacamata Fashion Style",
       description:
-        "Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.",
+        "Tampil stylish dengan frame kacamata fashion berdesain unik seperti bulat, cat-eye, hingga oversize. Material premium, warna variatif, dan lensa UV protection menjadikannya aksesori sempurna untuk gaya sehari-hari maupun momen spesial.",
     },
     {
-      image: img2,
-      title: "TEAMS",
+      image: service2,
+      title: "Kacamata Gen Z",
       description:
-        "Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.",
+        "Gen Z menjadikan kacamata sebagai aksesori penting untuk mengekspresikan gaya unik mereka. Dari frame oversize yang bold hingga bingkai logam minimalis yang elegan, tren ini memadukan estetika modern dengan fungsi.",
     },
     {
-      image: img,
-      title: "TEAMS",
+      image: service3,
+      title: "Kacamata Elegan",
       description:
         "Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.",
     },
   ];
 
   return (
-    <div className="bg-colorService">
+    <div id="services" className="bg-colorService">
       <div className="max-w-7xl mx-auto px-4 py-20">
         <h2 className="text-3xl font-semibold mb-16 tracking-widest">
           S E R V I C E S

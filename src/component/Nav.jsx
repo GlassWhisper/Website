@@ -10,27 +10,27 @@ const Navbar = () => {
                <div className="container py-2 mx-auto flex items-center justify-between relative">
                     <ul className="flex items-center mx-auto space-x-11 py-4 text-bg-register font-mono font-semibold tracking-wider ">
                          <li>
-                              <a href="/" className="hover:text-[#c8ced3] duration-500">
+                              <a href="#home" className="hover:text-[#c8ced3] duration-500">
                                    Home
                               </a>
                          </li>
                          <li>
-                              <a href="/about" className="hover:text-[#c8ced3] duration-500">
+                              <a href="#about" className="hover:text-[#c8ced3] duration-500">
                                    About
                               </a>
                          </li>
                          <li>
-                              <a href="/services" className="hover:text-[#c8ced3] duration-500">
+                              <a href="#services" className="hover:text-[#c8ced3] duration-500">
                                    Services
                               </a>
                          </li>
                          <li>
-                              <a href="/team" className="hover:text-[#c8ced3] duration-500">
+                              <a href="#teams" className="hover:text-[#c8ced3] duration-500">
                                    Team
                               </a>
                          </li>
                          <li>
-                              <a href="/blog" className="hover:text-[#c8ced3] duration-500">
+                              <a href="#blog" className="hover:text-[#c8ced3] duration-500">
                                    Blog
                               </a>
                          </li>
