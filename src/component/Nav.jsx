@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -8,31 +9,56 @@ const Navbar = () => {
                     <img src={logo} alt="Logo" className="w-12" />
                </div>
                <div className="container py-2 mx-auto flex items-center justify-between relative">
-                    <ul className="flex items-center mx-auto space-x-11 py-4 text-bg-register font-mono font-semibold tracking-wider ">
+                    <ul className="flex items-center mx-auto space-x-11 py-4 text-bg-register font-mono font-semibold tracking-wider">
                          <li>
-                              <a href="#home" className="hover:text-[#c8ced3] duration-500">
+                              <Link
+                                   to="home"
+                                   smooth={true}
+                                   duration={500}
+                                   className="hover:text-[#c8ced3] duration-500 cursor-pointer"
+                              >
                                    Home
-                              </a>
+                              </Link>
                          </li>
                          <li>
-                              <a href="#about" className="hover:text-[#c8ced3] duration-500">
+                              <Link
+                                   to="about"
+                                   smooth={true}
+                                   duration={500}
+                                   className="hover:text-[#c8ced3] duration-500 cursor-pointer"
+                              >
                                    About
-                              </a>
+                              </Link>
                          </li>
                          <li>
-                              <a href="#services" className="hover:text-[#c8ced3] duration-500">
+                              <Link
+                                   to="services"
+                                   smooth={true}
+                                   duration={500}
+                                   className="hover:text-[#c8ced3] duration-500 cursor-pointer"
+                              >
                                    Services
-                              </a>
+                              </Link>
                          </li>
                          <li>
-                              <a href="#teams" className="hover:text-[#c8ced3] duration-500">
+                              <Link
+                                   to="teams"
+                                   smooth={true}
+                                   duration={500}
+                                   className="hover:text-[#c8ced3] duration-500 cursor-pointer"
+                              >
                                    Team
-                              </a>
+                              </Link>
                          </li>
                          <li>
-                              <a href="#blog" className="hover:text-[#c8ced3] duration-500">
+                              <Link
+                                   to="blog"
+                                   smooth={true}
+                                   duration={500}
+                                   className="hover:text-[#c8ced3] duration-500 cursor-pointer"
+                              >
                                    Blog
-                              </a>
+                              </Link>
                          </li>
                     </ul>
                </div>
