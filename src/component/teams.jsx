@@ -18,7 +18,7 @@ const Teams = () => {
                 Glasswhisper app engineer development team
               </h1>
               <p className="text-gray-600 mt-[90px] font-mono">
-                yasir riski - muhammad zulfan sururi - muhammad hanif isnain - muhammad reikhan efendi
+                Yasir Rizqi - muhammad zulfan sururi - muhammad hanif isnain - muhammad reikhan efendi
               </p>
             </div>
 
