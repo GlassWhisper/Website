@@ -2,7 +2,7 @@ import React from "react";
 import img from "../assets/team1.png"
 import img2 from "../assets/team2.png"
 import img3 from "../assets/team3.png"
-
+import img4 from "../assets/team4.png"
 const Teams = () => {
      return (
          <section id="teams" className="bg-colorAbout min-h-screen flex items-center justify-center p-8">
@@ -50,16 +50,16 @@ const Teams = () => {
             {/* Team Member 3 */}
             <div className="">
               <img 
-                src={img2}
+                src={img3}
                 alt="Team member"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover p-14"
               />
             </div>
 
             {/* Team Member 4 */}
             <div className="">
               <img 
-                src={img3}
+                src={img4}
                 alt="Team member"
                 className="w-full h-full object-cover"
               />
