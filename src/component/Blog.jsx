@@ -1,22 +1,8 @@
-// import React from "react";
-// import Home from "./Home.jsx";
-
-// const Blog = () => {
-//     return (
-//         <label>
-//           Feedback Pengguna Aplikasi GlassWisper:
-//           <textarea name="postContent" rows={4} cols={40} />
-//         </label>
-//       );
-// };
-
-// export default Blog;
-import React from "react";
 import mockupImage from "../assets/mockup.png";
 
 const Blog = () => {
   return (
-    <div className="bg-colorService text-white min-h-screen flex flex-col items-center p-8">
+    <div id="blog" className="bg-colorService text-white min-h-screen flex flex-col items-center p-8">
       {/* Header Section */}
       <h1 className="text-4xl font-bold mb-8">Feedback User</h1>
 
