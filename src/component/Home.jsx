@@ -17,7 +17,7 @@ const Home = () => {
       </div>
       <div className="text-center">
         <a
-          href="https://github.com/yasirrzk"
+          href="https://github.com/GlassWhisper"
           target="_blank"
           rel="noopener noreferrer"
         >
