@@ -21,7 +21,7 @@ const Services = () => {
       image: service3,
       title: "Kacamata Elegan",
       description:
-        "Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.",
+        "Ciptakan kesan berkelas dengan frame kacamata elegan. Desain minimalis dengan sentuhan detail premium, warna netral seperti hitam atau emas, serta material berkualitas tinggi menjadikannya pilihan sempurna untuk tampilan formal maupun santai.",
     },
   ];
 

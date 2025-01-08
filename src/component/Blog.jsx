@@ -6,9 +6,13 @@ const Blog = () => {
   const [review, setReview] = useState("");
   const [rating, setRating] = useState("medium");
   const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+  const [popupType, setPopupType] = useState(""); // "success" or "error"
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Set loading state to true
 
     const feedbackData = {
       name: username,
@@ -17,7 +21,7 @@ const Blog = () => {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/feedback", {
+      const response = await fetch("https://2hn6tjlz-5000.asse.devtunnels.ms/feedback", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,39 +31,63 @@ const Blog = () => {
 
       const result = await response.json();
       if (response.ok) {
+        setPopupMessage("Selamat! Anda telah berhasil mengirim feedback kepada kami.");
+        setPopupType("success");
         setShowPopup(true);
-        setTimeout(() => setShowPopup(false), 3000);
         setUsername("");
         setReview("");
         setRating("3");
       } else {
-        alert("Error: " + result.message);
+        setPopupMessage("Maaf! Anda gagal mengirim feedback kepada kami.");
+        setPopupType("error");
+        setShowPopup(true);
       }
     } catch (error) {
       console.error("Error submitting feedback:", error);
-      alert("Failed to submit feedback. Please try again.");
+      setPopupMessage("Maaf! Anda gagal mengirim feedback kepada kami.");
+      setPopupType("error");
+      setShowPopup(true);
+    } finally {
+      setIsLoading(false); // Reset loading state
     }
   };
 
+  const handleClosePopup = () => {
+    setShowPopup(false); // Close popup when clicking OK
+  };
+
   return (
-    <div id="blog" className="bg-colorService text-white min-h-screen flex flex-col items-center p-8">
+    <div id="blog" className="bg-colorService text-white min-h-screen flex flex-col items-center pt-20">
       {/* Header Section */}
       <h1 className="text-4xl font-bold mb-8">Feedback User</h1>
 
+      {/* Popup Alert */}
       {showPopup && (
-        <div className="fixed justify-center top-5 right-5 bg-green-500 text-white p-4 rounded-lg shadow-lg">
-          Feedback submitted successfully!
+        <div className="fixed top-10 left-1/2 transform -translate-x-1/2 z-50">
+          <div
+            className={`p-6 rounded-lg shadow-lg backdrop-blur-md ${
+              popupType === "success" ? "bg-black bg-opacity-80 text-white" : "bg-black bg-opacity-80 text-white"
+            } flex flex-col items-center`}
+          >
+            <span className="font-semibold mb-4">{popupMessage}</span>
+            <button
+              onClick={handleClosePopup}
+              className="bg-button text-white font-bold py-2 px-6 rounded-md hover:bg-opacity-80"
+            >
+              OK
+            </button>
+          </div>
         </div>
       )}
 
       {/* Content Section */}
-      <div className="flex items-center w-full max-w-6xl">
+      <div className="flex items-center w-full max-w-6xl pt-16">
         {/* Left Side - Mockup Image */}
         <div className="flex-1 flex justify-center">
           <img
             src={mockupImage}
             alt="App Mockup"
-            className="w-full lg:w-3/4 xl:w-2/3 object-contain"
+            className="w-full object-contain mr-56"
           />
         </div>
 
@@ -94,9 +122,38 @@ const Blog = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="bg-navColor hover:-translate-y-1 text-white font-bold py-2 px-4 rounded-md mt-4"
+            disabled={isLoading}
+            className={`${
+              isLoading ? "bg-button cursor-not-allowed" : "bg-navColor hover:-translate-y-1"
+            } text-white font-bold py-2 px-4 rounded-md mt-4 flex items-center justify-center`}
           >
-            Submit Feedback
+            {isLoading ? (
+              <>
+                <svg
+                  className="animate-spin h-5 w-5 mr-3 text-white"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                  ></path>
+                </svg>
+                Processing...
+              </>
+            ) : (
+              "Submit Feedback"
+            )}
           </button>
         </form>
       </div>
