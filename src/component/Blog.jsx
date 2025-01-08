@@ -17,7 +17,7 @@ const Blog = () => {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/feedback", {
+      const response = await fetch("https://2hn6tjlz-5000.asse.devtunnels.ms/feedback", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
