@@ -57,7 +57,7 @@ const Navbar = () => {
                                    duration={500}
                                    className="hover:text-[#c8ced3] duration-500 cursor-pointer"
                               >
-                                   Blog
+                                   Feedback
                               </Link>
                          </li>
                     </ul>
