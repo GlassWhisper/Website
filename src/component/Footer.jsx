@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "/Vector.png";
 
 function Footer() {
@@ -85,3 +84,4 @@ function Footer() {
   );
 }
 
+export default Footer;
