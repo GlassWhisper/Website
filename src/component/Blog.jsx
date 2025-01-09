@@ -59,7 +59,7 @@ const Blog = () => {
   return (
     <div id="blog" className="bg-colorService text-white min-h-screen flex flex-col items-center pt-20">
       {/* Header Section */}
-      <h1 className="text-4xl font-bold mb-8">Feedback User</h1>
+      <h1 className="text-4xl font-bold mb-8 text-button">Feedback User</h1>
 
       {/* Popup Alert */}
       {showPopup && (
