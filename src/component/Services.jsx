@@ -1,27 +1,27 @@
-import React from "react";
-import service1 from "../assets/service1.png";
-import service2 from "../assets/service2.png";
-import service3 from "../assets/service3.png";
+import React, { useState } from "react";
+import service1 from "../assets/service1.jpg";
+import service2 from "../assets/service2.jpg";
+import service3 from "../assets/service3.jpg";
 
 const Services = () => {      
   const services = [
     {
       image: service1,
-      title: "Kacamata Fashion Style",
+      title: "Fashion Style Glasses",
       description:
-        "Tampil stylish dengan frame kacamata fashion berdesain unik seperti bulat, cat-eye, hingga oversize. Material premium, warna variatif, dan lensa UV protection menjadikannya aksesori sempurna untuk gaya sehari-hari maupun momen spesial.",
+        "Step up your style with unique, fashion-forward eyewear frames, ranging from round to cat-eye and oversized designs. Crafted with premium materials and available in a variety of vibrant colors, these glasses not only make a bold statement but also offer UV protection lenses, making them the perfect accessory for both everyday chic and special occasions.",
     },
     {
       image: service2,
-      title: "Kacamata Gen Z",
+      title: "Gen Z Glasses",
       description:
-        "Gen Z menjadikan kacamata sebagai aksesori penting untuk mengekspresikan gaya unik mereka. Dari frame oversize yang bold hingga bingkai logam minimalis yang elegan, tren ini memadukan estetika modern dengan fungsi.",
+        "Gen Z has embraced eyewear as a key accessory to express their unique style. From bold oversized frames to sleek minimalist metal designs, this trend blends modern aesthetics with practicality, making glasses not just a necessity but a statement of individuality.",
     },
     {
       image: service3,
-      title: "Kacamata Elegan",
+      title: "Elegant Glasses",
       description:
-        "Ciptakan kesan berkelas dengan frame kacamata elegan. Desain minimalis dengan sentuhan detail premium, warna netral seperti hitam atau emas, serta material berkualitas tinggi menjadikannya pilihan sempurna untuk tampilan formal maupun santai.",
+        "Create an air of sophistication with elegant eyewear frames. Featuring minimalist designs with exquisite premium details, neutral tones like black or gold, and high-quality materials, these glasses are the perfect choice for both formal and casual looks, adding a touch of refinement to any outfit.",
     },
   ];
 
@@ -34,28 +34,48 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="group">
-              {/* Image Container with Arch Shape */}
-              <div className="relative mb-8 m-10">
-                <div className="aspect-square rounded-t-full bg-gray-100 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                {/* Content */}
-                <div className="text-center px-4 py-6 bg-colorAbout  shadow-md">
-                <h3 className="text-sm font-semibold mb-4 tracking-widest">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-              </div>
-            </div>
+            <ServiceCard key={index} service={service} />
           ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ServiceCard = ({ service }) => {
+  const [readMore, setReadMore] = useState(false);
+
+  return (
+    <div className="group relative">
+      {/* Image Container with Arch Shape */}
+      <div className="relative mb-8 m-10">
+        <div className="aspect-square rounded-t-full bg-gray-100 overflow-hidden">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+        {/* Content */}
+        <div className="text-center px-4 py-6 bg-colorAbout shadow-md h-full flex flex-col">
+          <h3 className="text-sm font-semibold mb-4 tracking-widest">
+            {service.title}
+          </h3>
+          <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+            {readMore ? (
+              service.description
+            ) : (
+              <>
+                {service.description.substring(0, 100)}...
+              </>
+            )}
+          </p>
+          <button
+            onClick={() => setReadMore(!readMore)}
+            className="text-blue-500 underline mt-2"
+          >
+            {readMore ? "Close" : "Read More"}
+          </button>
         </div>
       </div>
     </div>
