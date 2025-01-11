@@ -57,7 +57,7 @@ const Blog = () => {
   };
 
   return (
-    <div id="blog" className="bg-colorService text-white min-h-screen flex flex-col items-center pt-20">
+    <div id="blog" className="bg-colorService text-white  flex flex-col items-center pt-20 pb-20">
       {/* Header Section */}
       <h1 className="text-4xl font-bold mb-8 text-button">Feedback User</h1>
 
@@ -81,18 +81,18 @@ const Blog = () => {
       )}
 
       {/* Content Section */}
-      <div className="flex items-center w-full max-w-6xl pt-16">
+      <div className="flex items-center w-full max-w-6xl pt-16 flex-col sm:flex-row">
         {/* Left Side - Mockup Image */}
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-center pb-12 md:w-1/2">
           <img
             src={mockupImage}
             alt="App Mockup"
-            className="w-full object-contain mr-56"
+            className="w-96 md:w-full object-contain md:mr-3 lg:mr-10 sm:mr-2 mt-4"
           />
         </div>
 
         {/* Form Features */}
-        <form className="flex-1 grid grid-cols-1 gap-6" onSubmit={handleSubmit}>
+        <form className="flex-1 grid grid-cols-1 gap-6 md:mr-6 md:w-1/2 pl-10" onSubmit={handleSubmit}>
           {/* Username Input */}
           <div className="bg-navColor p-6 rounded-lg shadow-lg">
             <h2 className="text-xl font-semibold">Username</h2>
