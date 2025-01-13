@@ -18,6 +18,9 @@ export default {
                     footer: "#C9A48A"
 
                },
+               fontFamily: {
+                    "praise" : ['Praise','sans-serif']
+               }
           },
      },
      plugins: [],

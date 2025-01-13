@@ -18,8 +18,8 @@ const Teams = () => {
               <h1 className="pb-[200px] text-4xl md:text-5xl font-bold leading-tight mb-6">
                 Glasswhisper app engineer development team
               </h1>
-              <p className="text-gray-600 mt-[90px] font-mono">
-                Yasir Rizqi - muhammad zulfan sururi - muhammad hanif isnain - muhamad reikhan efendi
+              <p className="text-gray-600 mt-[90px] font-Praise">
+                Yasir Rizqi - Muhammad Zulfan Sururi - Muhammad Hanif Isnain - Muhamad Reikhan Efendi
               </p>
             </div>
           </div>
