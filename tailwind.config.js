@@ -19,7 +19,8 @@ export default {
 
                },
                fontFamily: {
-                    "praise" : ['Praise','sans-serif']
+                    "praise" : ['Praise','sans-serif'],
+                    "rubik": ['Rubik Wet Paint','sans-serif']
                }
           },
      },
