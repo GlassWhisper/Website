@@ -92,7 +92,7 @@ const Blog = () => {
         </div>
 
         {/* Form Features */}
-        <form className="flex-1 grid grid-cols-1 gap-6 md:mr-6 md:w-1/2 pl-10" onSubmit={handleSubmit}>
+        <form className="flex-1 grid grid-cols-1 gap-6 md:mr-6 md:w-1/2" onSubmit={handleSubmit}>
           {/* Username Input */}
           <div className="bg-navColor p-6 rounded-lg shadow-lg">
             <h2 className="text-xl font-semibold">Username</h2>
