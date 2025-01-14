@@ -65,9 +65,8 @@ const Blog = () => {
       {showPopup && (
         <div className="fixed top-10 left-1/2 transform -translate-x-1/2 z-50">
           <div
-            className={`p-6 rounded-lg shadow-lg backdrop-blur-md ${
-              popupType === "success" ? "bg-black bg-opacity-80 text-white" : "bg-black bg-opacity-80 text-white"
-            } flex flex-col items-center`}
+            className={`p-6 rounded-lg shadow-lg backdrop-blur-md ${popupType === "success" ? "bg-black bg-opacity-80 text-white" : "bg-black bg-opacity-80 text-white"
+              } flex flex-col items-center`}
           >
             <span className="font-semibold mb-4">{popupMessage}</span>
             <button
@@ -81,18 +80,18 @@ const Blog = () => {
       )}
 
       {/* Content Section */}
-      <div className="flex items-center w-full max-w-6xl pt-16">
+      <div className="flex flex-col space-y-5 md:flex-row items-center w-full max-w-6xl pb-10 lg:pt-16">
         {/* Left Side - Mockup Image */}
         <div className="flex-1 flex justify-center">
           <img
             src={mockupImage}
             alt="App Mockup"
-            className="w-full object-contain mr-56"
+            className="w-full object-contain  md:mr-56"
           />
         </div>
 
         {/* Form Features */}
-        <form className="flex-1 grid grid-cols-1 gap-6" onSubmit={handleSubmit}>
+        <form className="flex-1 grid grid-cols-1 gap-6 w-full px-6 md:w-fit " onSubmit={handleSubmit}>
           {/* Username Input */}
           <div className="bg-navColor p-6 rounded-lg shadow-lg">
             <h2 className="text-xl font-semibold">Username</h2>
@@ -123,9 +122,8 @@ const Blog = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className={`${
-              isLoading ? "bg-button cursor-not-allowed" : "bg-navColor hover:-translate-y-1"
-            } text-white font-bold py-2 px-4 rounded-md mt-4 flex items-center justify-center`}
+            className={`${isLoading ? "bg-button cursor-not-allowed" : "bg-navColor hover:-translate-y-1"
+              } text-white font-bold py-2 px-4 rounded-md mt-4 flex items-center justify-center`}
           >
             {isLoading ? (
               <>
