@@ -12,14 +12,14 @@ const Teams = () => {
           {/* Left Content */}
           <div className="space-y-6 text-center lg:text-left">
             <div>
-              <h2 className="text-xl sm:text-2xl uppercase font-bold tracking-wider text-black mb-4 font-rubik">
+              <h2 className="text-xl sm:text-2xl uppercase font-bold tracking-wider text-black mb-4 font-mono">
                 T E A M S
               </h2>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 font-rubik">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 font-mono">
                 Glasswhisper App Engineer Development Team
               </h1>
               {/* 3D Text Effect */}
-              <p className="relative font-rubik text-xl sm:text-2xl
+              <p className="relative font-mono text-xl sm:text-2xl
                 [text-shadow:_2px_2px_0_rgb(203_213_225),
                              4px_4px_0_rgb(148_163_184),
                              6px_6px_0_rgb(100_116_139)]">
